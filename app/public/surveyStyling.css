@@ -1,115 +1,258 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
-
-html,
-body {
-  background-color: #f8cf98;
-  text-align: center;
-  font-family: 'Raleway', Helvetica, sans-serif;
-  min-width: 320px;
+.mm-survey {
+	margin-top: 75px;
+	margin-bottom: 50px;
 }
 
-header {
-  font-size: 2em;
-  font-weight: bold;
-  margin: 20px;
+.mm-survey-container {
+	width: 100%;
+	min-height: 600px;
+	background: #fafafa;
 }
 
-#form-outer {
-  background-color: rgb(250, 250, 250);
-  margin: 0 auto;
-  border-radius: 4px;
-  width: 75%;
-  max-width: 900px;
-  padding: 10px;
-  padding-top: 20px;
+.mm-survey-results-container {
+	width: 100%;
+	min-height: 600px;
+	background: #fafafa;
 }
 
-.labels {
-  display: inline-block;
-  text-align: right;
-  width: 40%;
-  padding: 5px;
-  vertical-align: top;
-  margin-top: 10px;
+.mm-survey-page {
+	display: none;
+	font-family: 'Raleway';
+	font-weight: 100;
+	padding: 40px;
 }
 
-.rightTab {
-  display: inline-block;
-  text-align: left;
-  width: 48%;
-  vertical-align: middle;
+.mm-survey-page.active {
+	display: block;
 }
 
-.input-field {
-  height: 20px;
-  width: 280px;
-  padding: 5px;
-  margin: 10px;
-  border: 1px solid #c0c0c0;
-  border-radius: 2px;
+.mm-survey-controller {
+	position: relative;
+    height: 60px;
+    background:  rgb(48, 51, 51);
+    padding: 12px 14px;
 }
 
-#userAge {
-  width: 40px;
+.mm-survey-results-controller {
+	position: relative;
+    height: 60px;
+    background: #333;
+    padding: 12px 14px;
 }
 
-.userRatings,
-input[type="checkbox"] {
-  float: left;
-  margin-right: 5px;
-}
-
-#submit {
-  background-color: #59ace0;
-  border-radius: 4px;
-  color: white;
-  font-size: 1em;
-  height: 40px;
-  width: 96px;
-  margin: 10px;
-  border: 0px solid;
-}
-
-.dropdown {
-  height: 35px;
-  width: 140px;
-  padding: 5px;
-  margin: 10px;  
-  margin-top: 15px;
-  border: 1px solid #c0c0c0;
-  border-radius: 2px;
-}
-
-.radio, .checkbox {
-  position: relative;
-  left: -43px;
-  margin-left: 10px;
-  display: block;
-  padding-bottom: 10px;
-}
-
-@media screen and (max-width: 833px) {
-  .input-field {
-    width: 80%;
-  }
-  select {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .labels {
-    width: 100%;
-    text-align: left;
-  }
-  .rightTab {
-    width: 80%;
+.mm-back-btn {
+	display: inline-block;
+    position: relative;
     float: left;
-  }
-  .input-field {
-    width: 100%;
-  }
-  select {
-    width: 100%;
-  }
+}
+
+.mm-prev-btn {
+	display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.mm-next-btn {
+	display: inline-block;
+	opacity: 0.25;
+    position: relative;
+    float: right;
+}
+
+.mm-finish-btn {
+	display: none;
+    position: relative;
+    float: right;
+}
+
+.mm-finish-btn button {
+	background: #3DD2AF !important;
+    color: #fff;
+}
+
+.mm-survey-controller button {
+	background: #fff;
+    border: none;
+    padding: 8px 18px;
+    font-family: 'Raleway';
+    font-weight: 300;
+}
+
+.mm-survey-results-controller button {
+	background: #fff;
+	border: none;
+	padding: 8px 18px;
+}
+
+.mm-survey-progress {
+	width: 100%;
+	height: 30px;
+	background: #f5f5f5;
+	overflow: hidden;
+}
+
+.mm-progress {
+	transition: width 0.5s ease-in-out;
+}
+
+.mm-survey-progress-bar {
+	height: 30px;
+    width: 0%;
+    background: linear-gradient(to left,  rgb(110, 255, 248), #3CD3AD);
+}
+
+.mm-survey-q {
+	list-style-type: none;
+	padding: 0px;
+}
+
+.mm-survey-q li {
+	display: block;
+	/*padding: 20px 0px;*/
+	margin-bottom: 10px;
+	width: 100%;
+	background: #fff;
+}
+
+.mm-survey-q li input {
+	width: 100%;
+}
+
+.mm-survery-content label {
+	width: 100%;
+	padding: 10px 10px;
+	margin: 0px !important;
+}
+
+.mm-survery-content label:hover {
+	cursor: pointer;
+}
+
+.mm-survey-question {
+	min-height: 100px;
+}
+
+.mm-survey-question p {
+	font-size: 22px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.mm-survery-content label p {
+	display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 5px;
+    margin: 0px;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label {
+	color: #292321;
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 16px;
+}
+
+input[type="radio"] + label span {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 2px 4px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+input[type="radio"] + label span {
+ 	background-color: #333;
+}
+
+input[type="radio"]:checked + label span {
+	border: 2px solid rgb(110, 255, 248);
+	background: transparent;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+	-webkit-transition: background-color 0.20s ease-in-out;
+	-o-transition: background-color 0.20s ease-in-out;
+	-moz-transition: background-color 0.20s ease-in-out;
+	transition: background-color 0.20s ease-in-out;
+}
+
+.mm-survey-item {
+	background: #fff;
+	margin-bottom: 15px;
+	border-bottom: 1px solid rgba(33,33,33,0.15);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.mm-prev-btn button:focus, .mm-next-btn button:focus, .mm-finish-btn button:focus {
+	outline: none;
+	border: none;
+}
+
+.mm-survey.okay .mm-next-btn {
+	display: inline-block;
+	opacity: 1;
+}
+
+.mm-finish-btn.active {
+	display: inline-block;
+}
+
+.mm-survey-results {
+	display: none;
+}
+
+.mm-survey-results-score {
+	margin: 0px;
+    padding: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Raleway';
+    font-weight: 600;
+    letter-spacing: -6px;
+}
+
+.mm-survey-results-list {
+	list-style-type: none;
+	padding: 0px 15px;
+    margin: 0px;
+}
+
+.mm-survey-results-item {
+	color: #fff;
+    margin-top: 10px;
+    padding: 15px 15px 15px 0px;
+    font-family: 'Raleway';
+    font-weight: 300;
+}
+
+.mm-survey-results-item.correct {
+	background: linear-gradient(to left,  rgb(110, 255, 248);, #3CD3AD);
+}
+
+.mm-survey-results-item.incorrect {
+	background: linear-gradient(to left, #d33c62, #dc1144);
+}
+
+.mm-item-number {
+	height: 40px;
+	position: relative;
+	padding: 17px;
+	background: #333;
+	color: #fff;
+}
+
+.mm-item-info {
+	float: right;
 }
