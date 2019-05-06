@@ -14,42 +14,13 @@ body, html {
   line-height: 1.8;
 }
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('/w3images/parallax1.jpg');
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
-}
-
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
+.nounderline {
+  text-decoration: none !important
 }
+
 </style>
 <body>
 
@@ -59,9 +30,9 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>  HOME</a>
-    <a href="#survey" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question"></i>  SURVEY</a>
-    <a href="#friends" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-users"></i>  MY FRIENDS</a>
+    <a href="home.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i>  HOME</a>
+    <a href="survey.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-question"></i>  SURVEY</a>
+    <a href="friends.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-users"></i>  MY FRIENDS</a>
     </a>
   </div>
 
@@ -70,7 +41,7 @@ body, html {
         <img src="backlit-bright-dawn-697243.jpg" class="w3-round w3-image w3-center" alt="Photo of Me" width="1500" height="300">
 
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <button class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">FIND <span class="w3-hide-small">A</span> FRIEND</button>
+    <button class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><a class="nounderline" href="survey.html">FIND <span class="w3-hide-small">A</span> FRIEND</a></button>
   </div>
 </div>
 -
